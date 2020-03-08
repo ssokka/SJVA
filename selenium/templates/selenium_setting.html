@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+  {{ macros.m_button_group([['global_setting_save_btn', '설정 저장']])}}
+  {{ macros.m_row_start('5') }}
+  {{ macros.m_row_end() }}
+  <nav>
+    {{ macros.m_tab_head_start() }}
+      {{ macros.m_tab_head2('normal', '일반', true) }}
+      {{ macros.m_tab_head2('oracle', '오라클', false) }}
+    {{ macros.m_tab_head_end() }}
+  </nav>  
+<form id='setting' name='setting'>
+  <div class="tab-content" id="nav-tabContent">
+    {{ macros.m_tab_content_start('normal', true) }}
+<!--      {{ macros.setting_input_text('download_path', '다운로드 경로', value=arg['download_path'], desc=['다운로드 경로입니다.']) }}-->
+    {{ macros.m_tab_content_end() }}
+    {{ macros.m_tab_content_start('oracle', false) }}
+<!--      {{ macros.setting_input_int('schedulerInterval', '스케쥴링 실행 주기', value=arg['schedulerInterval'], min='1', placeholder='10', desc='minute 단위') }}-->
+    {{ macros.m_tab_content_end() }}
+  </div><!--tab-content-->
+</form>
+</div><!--전체-->
+
+<script type="text/javascript">
+var package_name = "{{arg['package_name'] }}";
+var current_data = null;
+
+$(document).ready(function(){
+});
+
+</script>
+{% endblock %}
