@@ -36,10 +36,10 @@ menu = {
 plugin_info = {
     "name": "selenium",
     "category_name": "custom",
-    "version": "0.0.0.1",
+    "version": "0.0.0.0",
     "developer": "ssokka",
     "description": "Selenium Auto Clicker",
-    "home": "",
+    "home": "https://github.com/ssokka/SJVA/tree/master/selenium",
     "more": "",
 }
 
